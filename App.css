@@ -1,0 +1,238 @@
+/* Importing the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+/* Resetting default styles and applying global styles */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+}
+
+:root {
+ /* colors4f772d aaaaf8#8f8ffb,green#31572c#90a955#ecf39e#132a13*/
+ --main-bg:  #ddbea9;
+ --rec-bg: #ffe8d6;
+ --light-grey: #d3d3d3;
+ --white: #fff;
+ --icon-color:  #cb997e;
+ --nav-btn:#cb997e;
+ /* font sizes */
+ --basic: 10px;
+ --normal: 20px;
+}
+
+/* Styling the body element */
+body {
+ margin: auto;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 500px;
+ background-color: var(--main-bg);
+}
+
+/* Styling the main container */
+.main-div {
+ background-color: var(--white);
+ min-height: 500px;
+ max-height: 600px;
+ overflow: auto;
+ border-radius: var(--basic);
+ padding: 30px;
+}
+
+/* Styling the scrollbar in the main container */
+.main-div::-webkit-scrollbar {
+ background-color: #4f772d8b;
+ width: 5px;
+ border-radius: 2px;
+}
+
+/* Styling form elements */
+input,
+textarea,
+button {
+ outline: none;
+ border: 1px solid var(--light-grey);
+ font-size: 1.2rem;
+ margin: 6px;
+ border-radius: 4px;
+ width: 100%;
+ background: none;
+ padding: var(--basic);
+ resize: none;
+ cursor: pointer;
+}
+
+/* Styling textarea */
+textarea {
+ height: 100px;
+ overflow: auto;
+}
+
+/* Styling scrollbar in the textarea */
+textarea::-webkit-scrollbar {
+ width: 4px;
+ background-color: var(--light-grey);
+ border-radius: 3px;
+}
+
+/* Styling submit button */
+button {
+ background-color:var(--nav-btn);
+ color: var(--white);
+ font-size: 1.2rem;
+}
+
+button:active {
+ transform: scale(0.96);
+}
+
+/* Styling the recipe container */
+.recipe {
+ max-width: 460px;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+}
+
+/* Styling individual recipe items */
+.recipe-items {
+ overflow: auto;
+ display: flex;
+ flex-direction: column;
+ min-width: 440px;
+ max-height: 400px;
+ background-color: var(--rec-bg);
+ margin: var(--basic);
+ border-radius: var(--basic);
+ padding: var(--basic) 15px;
+ transition: all 0.3s ease-in;
+}
+
+/* Styling individual recipe items li */
+.recipe-items ul li {
+ margin-bottom: 5px;
+ font-size: 18px;
+ overflow-wrap: break-word;
+}
+
+/* Styling scrollbar in the recipe items */
+.recipe-items::-webkit-scrollbar {
+ width: 3px;
+ border-radius: var(--normal);
+}
+
+/* Styling scrollbar thumb on hover */
+.recipe-items:hover::-webkit-scrollbar-thumb {
+ width: 3px;
+ background-color: #aeaeae;
+}
+
+/* Styling scrollbar track on hover */
+.recipe-items:hover::-webkit-scrollbar-track {
+ width: 3px;
+}
+
+/* Styling icons container */
+.icons {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background-color: var(--icon-color);
+ padding: 8px var(--normal);
+ border-radius: var(--normal);
+ color: var(--white);
+ font-size: 23px;
+}
+
+/* Styling individual icon */
+.icon {
+ cursor: pointer;
+ font-size: 23px;
+ padding: 4px;
+}
+
+/* Styling icon on active */
+.icon:active {
+ background-color: var(--white);
+ padding: 4px;
+ border-radius: 50%;
+ color: var(--icon-color);
+ box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling unordered list */
+ul {
+ list-style: none;
+}
+
+/* Styling the main navigation container */
+.main-ul {
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background-color: var(--nav-btn);
+ padding: 5px;
+ border-radius: 5px;
+ max-height: 50px;
+ margin-bottom: var(--basic);
+}
+
+/* Styling individual navigation links */
+.main-ul li a {
+ color: var(--white);
+ text-decoration: none;
+ font-size: 23px;
+ margin: var(--basic);
+}
+
+/* Styling navigation and clear-all links on hover */
+.main-ul li a:hover,
+.clearall:hover {
+ color: black;
+ text-decoration: underline;
+ transition: all 0.2s ease;
+}
+
+/* Styling clear-all button */
+.clearall {
+ width: auto;
+ border: none;
+ padding: 5px;
+ background: none;
+ line-height: 100%;
+ text-align: center;
+ border-radius: 7px;
+}
+
+/* Styling the clear-all button icon */
+.clearall span {
+ font-size: 40px;
+}
+
+/* Styling list item with class 'color' */
+li.color {
+ color: var(--nav-btn);
+ font-size: var(--normal);
+}
+
+/* Styling list items within the recipe container */
+.recipe-items li {
+ color: #252326;
+ border-radius: 2px;
+ margin: 4px;
+}
+
+.text {
+ width: 450px;
+}
+
+.grey {
+ font-size: 15px;
+ border-radius: 4px;
+ color: #ff8181;
+}
